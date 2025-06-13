@@ -2,9 +2,9 @@
 import { useState } from 'react';
 
 export default function TeamerfahrungTool() {
-  const [E, setE] = useState(0);
-  const [K, setK] = useState(0);
-  const [F, setF] = useState(0);
+  const [E, setE] = useState();
+  const [K, setK] = useState();
+  const [F, setF] = useState();
 
   const calcTeamerfahrung = (E, K, Fsub) => {
     const Eadj = E - 11;
