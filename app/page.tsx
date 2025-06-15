@@ -35,7 +35,7 @@ export default function TeamerfahrungTool() {
       style={{ backgroundColor: '#5e935c' }} // HT-Grün
     >
       <div className="bg-white bg-opacity-80 p-6 rounded-xl shadow-md">
-        <h1 className="text-2xl font-bold mb-4">TeamXP Calculator  <span className="text-base italic font-normal"><em>by IanMajor (7989526)</em>)</span></h1>
+        <h1 className="text-2xl font-bold mb-4">TeamXP Calculator  <span className="text-base italic font-normal"><em>by IanMajor (7989526)</em></span></h1>
         <div className="space-y-4">
           <div>
             <label className="block font-semibold">XP Players <span className="text-sm italic font-normal">(of all 11 players)</span></label>
