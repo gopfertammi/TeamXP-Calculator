@@ -1,7 +1,4 @@
 "use client";
-export const metadata = {
-  title: 'TeamXP',
-};
 import { useState } from 'react';
 
 export default function TeamerfahrungTool() {
