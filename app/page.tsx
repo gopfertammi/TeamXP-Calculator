@@ -46,7 +46,7 @@ export default function TeamerfahrungTool() {
             <input type="number" value={K} onChange={e => setK(Number(e.target.value))} className="w-full p-2 rounded border" />
           </div>
           <div>
-            <label className="block font-semibold">Leadership Captain</label>
+            <label className="block font-semibold">Leadership (LS) Captain</label>
             <input type="number" step="0.01" value={F} onChange={e => setF(Number(e.target.value))} className="w-full p-2 rounded border" />
           </div>
           <div className="mt-4">
