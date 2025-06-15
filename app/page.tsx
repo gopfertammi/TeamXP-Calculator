@@ -1,4 +1,7 @@
 "use client";
+export const metadata = {
+  title: 'TeamXP',
+};
 import Head from 'next/head';
 import { useState } from 'react';
 
