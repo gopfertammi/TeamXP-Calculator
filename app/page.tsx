@@ -35,10 +35,10 @@ export default function TeamerfahrungTool() {
       style={{ backgroundColor: '#5e935c' }} // HT-Grün
     >
       <div className="bg-white bg-opacity-80 p-6 rounded-xl shadow-md">
-        <h1 className="text-2xl font-bold mb-4">TeamXP Calculator</h1>
+        <h1 className="text-2xl font-bold mb-4">TeamXP Calculator <span className="text-base font-normal">(by IanMajor (7989526))</span></h1>
         <div className="space-y-4">
           <div>
-            <label className="block font-semibold">XP Players</label>
+            <label className="block font-semibold">XP Players <span className="text-sm italic">(of all 11 players)</span></label>
             <input type="number" value={E} onChange={e => setE(Number(e.target.value))} className="w-full p-2 rounded border" />
           </div>
           <div>
