@@ -31,10 +31,10 @@ export default function TeamerfahrungTool() {
   }));
 
   return (
-    <Head>
-      <title>TeamXP</title>
-    </Head>
-    
+    <div style={{ backgroundColor: '#5e935c' }} className="p-4 max-w-xl mx-auto min-h-screen">
+      <Head>
+        <title>TeamXP Calculator</title>
+      </Head>    
     <div
       className="p-4 max-w-xl mx-auto min-h-screen"
       style={{ backgroundColor: '#5e935c' }} // HT-Grün
