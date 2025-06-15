@@ -2,7 +2,6 @@
 export const metadata = {
   title: 'TeamXP',
 };
-import Head from 'next/head';
 import { useState } from 'react';
 
 export default function TeamerfahrungTool() {
@@ -34,10 +33,6 @@ export default function TeamerfahrungTool() {
   }));
 
   return (
-    <div style={{ backgroundColor: '#5e935c' }} className="p-4 max-w-xl mx-auto min-h-screen">
-      <Head>
-        <title>TeamXP Calculator</title>
-      </Head>    
     <div
       className="p-4 max-w-xl mx-auto min-h-screen"
       style={{ backgroundColor: '#5e935c' }} // HT-Grün
