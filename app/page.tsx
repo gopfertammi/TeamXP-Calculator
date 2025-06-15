@@ -12,19 +12,16 @@ export default function TeamerfahrungTool() {
     const Fadj = F - 1 + Fsub;
     const EK = Eadj + Kadj;
 
-    if (EK <= 190) {
-      const a = 0.3178008, b = 7.18443562, c = 2.72439076, m = 5.0, d = 0.03667101, e = 0.00877142;
-      const base = Math.pow(EK, a);
-      const lead = 1 - Math.pow((7 - Fadj) / b, c);
-      const sigmoid = 1 / (1 + Math.exp(-e * (EK - 150)));
-      return m * base * lead * sigmoid + d;
-    } else {
-      const a = 0.86893593, b = 18.40997074, c = 1.03587888, m = 0.22897875, d = -6.31078421, e = 0.92018107;
-      const base = Math.pow(EK, a);
-      const lead = 1 - Math.pow((7 - Fadj) / b, c);
-      const sigmoid = 1 / (1 + Math.exp(-e * (EK - 150)));
-      return m * base * lead * sigmoid + d;
-    }
+    const A = 0.1406;
+    const p = 0.8859;
+    const B = 0.0471;
+    const C = 6.6269;
+    const q = -0.2244;
+
+    const base = Math.pow(EK, p);
+    const damping = 1 + (B * (Fadj - 5)) / (1 + Math.pow(EK * C, q));
+    const result = A * base * damping;
+    return result;
   };
 
   const results = [0.0, 0.5, 0.9].map(sub => ({
@@ -35,21 +32,21 @@ export default function TeamerfahrungTool() {
   return (
     <div
       className="p-4 max-w-xl mx-auto min-h-screen"
-      style={{ backgroundColor: '#5e935c' }} // extrahiertes mittleres HT-Grün aus Bild
+      style={{ backgroundColor: '#5e935c' }} // HT-Grün
     >
       <div className="bg-white bg-opacity-80 p-6 rounded-xl shadow-md">
         <h1 className="text-2xl font-bold mb-4">TeamXP Calculator</h1>
         <div className="space-y-4">
           <div>
-            <label className="block font-semibold">XP Players </label>
+            <label className="block font-semibold">XP Players</label>
             <input type="number" value={E} onChange={e => setE(Number(e.target.value))} className="w-full p-2 rounded border" />
           </div>
           <div>
-            <label className="block font-semibold">XP Captain </label>
+            <label className="block font-semibold">XP Captain</label>
             <input type="number" value={K} onChange={e => setK(Number(e.target.value))} className="w-full p-2 rounded border" />
           </div>
           <div>
-            <label className="block font-semibold">Leadership Captain </label>
+            <label className="block font-semibold">Leadership Captain</label>
             <input type="number" step="0.01" value={F} onChange={e => setF(Number(e.target.value))} className="w-full p-2 rounded border" />
           </div>
           <div className="mt-4">
