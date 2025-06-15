@@ -31,7 +31,6 @@ export default function TeamerfahrungTool() {
   }));
 
   return (
-<>
     <Head>
       <title>TeamXP</title>
     </Head>
